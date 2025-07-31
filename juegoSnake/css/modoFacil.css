@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/descargas/fondoSnake.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+.contenedor{
+    background-color: rgb(5, 114, 5);
+    width: 100%;
+    max-width: 600px;
+    max-height: 700px;
+    padding-bottom: 20px;
+    z-index: 90;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.193);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+canvas{
+    display: block;
+    margin-inline: auto;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    height: auto;
+    background-color: rgb(130, 194, 100);
+}
+
+header span{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    height: fit-content;
+    position: relative;
+}
+
+header span.cronometro{
+    font-size: 26px;
+    top: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header span img{
+    vertical-align: middle;
+    width: 40px;
+}
+
+@keyframes scaleOpacity {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.mas1{
+    opacity: 1;
+    font-size: 50px;
+    color: rgb(86, 197, 35);
+    text-shadow: 0px 0px 2px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: block;
+    animation: scaleOpacity 0.5s forwards;
+}

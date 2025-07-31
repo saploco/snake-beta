@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-image: url(/descargas/fondoLogros.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(1px);
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+article figure{
+    font-size: 80px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0px 0px 15px black;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+figure small{
+    position: absolute;
+    width: 100%;
+    top: 110%;
+    text-align: center;
+    left: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.infoTexto{
+    position: absolute;
+    bottom: 110%;
+    left: 80%;
+    width: 150px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    border-radius: 10px 10px 10px 0px;
+    text-align: center;
+    opacity: 0;
+    display: none;
+    transition: opacity .5s ease;
+}
+
+@keyframes desbloquear{
+    0%{
+        transform: scale(1);
+        filter: grayscale(100%);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+    
+}
+
+.desbloqueado{
+    box-shadow: 0px 0px 15px rgb(70, 59, 0);
+    border: 1px solid rgba(255, 255, 255, 0.1.5);
+    animation: desbloquear .8s ease-out; 
+    filter: grayscale(0%);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+button.reiniciar{
+    background-color: rgb(136, 0, 0);
+    position: absolute;
+    left: 50%;
+    color: white;
+    text-align: start;
+    padding-left: 30px;
+    transform: translateX(-50%);
+    bottom: 15px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    transition: all .2s ease;
+}
+
+button.reiniciar:hover{
+    background-color: rgb(155, 0, 0);
+    cursor: pointer;
+    transform: translateX(-50%) scale(1.05);
+    transition: all .2s ease;
+}
+
+button.reiniciar img{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 30px;
+}
+
+#volver{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    cursor: pointer;
+}
+#volver:hover{
+    transform: scale(1.1);
+    transition: all .2s ease;
+}

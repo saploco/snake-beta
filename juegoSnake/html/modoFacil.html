@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/modoFacil.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Facil</title>
+</head>
+<body>
+    <div class="fondo"></div>
+    
+    <div class="contenedor">
+        <header>
+            <span class="cronometro" id="cronometroElemento">
+            </span>
+            <span id="vidas" class="vidas">
+                <img src="/descargas/corazon.png" alt=""> 2
+            </span>
+            <span id="comida" class="comida">
+                <img src="/descargas/manzana.png" alt=""> 0
+            </span>
+            <span id="record" class="record">
+                <img src="/descargas/copa.png" alt=""> 0
+            </span>
+        </header>
+
+        <canvas id="gameCanvas" width="400" height="360"></canvas>
+    </div>
+    
+    <script src="/js/snake.js"></script>
+    <script src="/js/variables.js"></script>
+    <script src="/js/comida.js"></script>
+    <script src="/js/contadorComida.js"></script>
+    <script src="/js/contadorRecord.js"></script>
+    <script src="/js/contadorVida.js"></script>
+    <script src="/js/juego.js"></script>
+</body>
+</html>

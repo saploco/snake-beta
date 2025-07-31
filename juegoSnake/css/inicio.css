@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/descargas/fondoSnake.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+}
+
+.seccion{
+    margin-inline: auto;
+    width: 70%;
+    max-width: 320px;
+    aspect-ratio: 4 / 5;
+    padding-bottom: 20px;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.snake{
+    position: absolute;
+    bottom: 25%;
+    left: 15px;
+}
+
+.cuerpo{
+    width: 150px;
+    height: 30px;
+    background-color: #4A6EE0;
+    border-radius: 270% 50px 50px 20px;
+    position: relative;
+}
+
+.ojo{
+    position: absolute;
+    top: -12px;
+    left: 95px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #4A6EE0;
+    background-color: white;
+}
+
+.ojo:nth-child(3){
+    left: 111px;
+}
+
+.pupila{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 1px;
+    background-color: #0C1D6F;
+}
+
+.boca{
+    position: absolute;
+    top: 18px;
+    left: 100px;
+    width: 40px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #0C1D6F;
+}
+
+.nariz{
+    position: absolute;
+    top: 8px;
+    left: 140px;
+    width: 2px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #0c1c6f;
+}
+
+.nariz:nth-last-child(1){
+    left: 145px;
+}
+
+.fondoAzul{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 150, 236);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fondoVerde{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(46, 189, 46);
+    border-radius: 0 0 8px 8px;
+}
+
+.seccion button{
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin-block: 8px;
+    font-size: 20px;
+    background-color: rgba(24, 95, 201, 0.8);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
+.seccion button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+button.botonLogros{
+    background-color: rgba(184, 184, 38, 0.8);
+}
+
+button.botonAjustes{
+    background-color: rgb(206, 206, 206, 0.8);
+}
+
+.seccion button img{
+    width: 30px;
+    position: absolute;
+    left: 5px;
+}
+
+.info{
+    width: 25px !important;
+    position: absolute !important;
+    left: 86% !important;
+}
+
+.infoTexto{
+    position: absolute;
+    bottom: 35px;
+    left: 90%;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(255, 247, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.6);
+    border-radius: 5px 5px 5px 0px;
+    display: none;
+}
+
+#contadores{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    top: 10%;
+}
+
+.comida, .record{
+    position: relative;
+}
+
+.comida img, .record img{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    margin-inline: auto;
+}
+
+.valorComida, .valorRecord{
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 30px;
+}
+
+.nombre{
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+section.marco{
+    display: none;
+    position: absolute;
+    width: 90%;
+    height: calc(100% - 150px);
+    top: 50px;
+    left: 5%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: rgba(189, 189, 189, 0.2);
+    border-radius: 0px 0px 5px 5px;
+}
+
+table#estadisticas{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.fondoEstadisticas{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+table#estadisticas td{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: linear-gradient(0deg, rgba(122, 122, 122, 0.6) 50%, rgba(160, 160, 160, 0.6) 100%);
+    border-radius: 3px;
+    color: rgb(241, 241, 241);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+table#estadisticas th{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 1px;
+    color: white;
+    font-size: 24px;
+}
+
+.iconoCerrar{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+button.borraHistorial{
+    display: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 15px;
+    color: white;
+    width: 220px;
+    height: 40px;
+    background-color: rgb(151, 0, 0);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .1s ease;
+}
+
+button.borraHistorial:hover{
+    transform: translateX(-50%) scale(1.04);
+    transition: all .15s ease;
+}
+
+button.borraHistorial img{
+    width: 25px;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+}
+
+input::placeholder{
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.aLogros{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 10px;
+    left: calc(100% - 50px);
+    cursor: pointer;
+    scale: 0.8;
+}
+
+.aLogros img{
+    width: 40px;
+}
+
+.aLogros:hover{
+    scale: 1.08;
+    transition: scale .1s ease;
+}

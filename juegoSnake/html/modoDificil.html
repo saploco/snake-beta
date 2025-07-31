@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/modoDificil.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Dificil</title>
+</head>
+<body>
+    <div class="fondo"></div>
+    
+    <div class="contenedor">
+        <header>
+            <span class="cronometro" id="cronometroElemento">
+            </span>
+            <span id="comida" class="comida">
+                <img src="/descargas/manzana.png" alt=""> 0
+            </span>
+            <span id="record" class="record">
+                <img src="/descargas/copa.png" alt=""> 0
+            </span>
+        </header>
+
+        <div id="canvasContainer">
+    <canvas id="gameCanvas" width="440" height="400"></canvas>
+        </div>
+
+    </div>
+    <script src="/jsDificil/snake.js"></script>
+    <script src="/jsDificil/variables.js"></script>
+    <script src="/jsDificil/comida.js"></script>
+    <script src="/jsDificil/contadorComida.js"></script>
+    <script src="/jsDificil/contadorRecord.js"></script>
+    <script src="/js/contadorVida.js"></script>
+    <script src="/jsDificil/juego.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-image: url(/descargas/fondoAjustes.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    backdrop-filter: blur(2px) brightness(0.7);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.columna{
+    width: calc(50% - 5px);
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    width: 100%;
+    height: fit-content;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.7);
+}
+
+legend{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+fieldset label{
+    font-size: 22px;
+}
+
+input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+}
+
+input[type='text']{
+    width: 50%;
+}
+
+select{
+    width: 50%;
+}
+
+input[type='checkbox'], input[type='text'], select{
+    font-size: 18px;
+    margin-block: 10px;
+}
+
+a{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding-inline: 20px;
+    font-size: 48px;
+    text-shadow: 1px 1px 2px white;
+    cursor: pointer;
+}
+
+label{
+    margin-left: 10px;
+}
+
+#volver{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    cursor: pointer;
+}
+#volver:hover{
+    transform: scale(1.1);
+    transition: all .2s ease;
+}

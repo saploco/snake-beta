@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/inicio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+</head>
+<body>
+    <div class="fondo"></div>
+
+    <section class="seccion">
+        <article class="todo">
+            <div id="fondoAzul" class="fondoAzul">
+                <div id="contadores">
+                    <div id="comida" class="comida">
+                        <img src="/descargas/manzana.png" alt="">
+                        <div id="comidaValor" class="valorComida"></div>
+                    </div>
+                    
+                    <div id="record" class="record">
+                        <img src="/descargas/copa.png" alt="">
+                        <div id="recordValor" class="valorRecord"></div>
+                    </div>
+                </div>
+                <article class="snake">
+                    <div class="cuerpo"></div>
+                    <div class="ojo">
+                        <div class="pupila"></div>
+                    </div>
+                    <div class="ojo">
+                        <div class="pupila"></div>
+                    </div>
+                    <div class="boca"></div>
+                    <div class="nariz"></div>
+                    <div class="nariz"></div>
+                </article>
+                <div id="fondoVerde" class="fondoVerde"></div>
+            </div>
+
+            <button id="partidaFacil" onclick="window.location.href='/html/modoFacil.html';" type="button">
+                <img src="/descargas/facil.png" alt="">
+
+                Modo facil
+
+                <img src="/descargas/info.png" alt="" class="info">
+
+                <span class="infoTexto">Disfruta de un juego relajado con tres vidas y la ventaja de paredes magicas. Perfecto para practicar si es tu primera vez.</span>
+            </button>
+
+            <button id="partidaDificil" onclick="window.location.href='/html/modoDificil.html';" type="button">
+                <img src="/descargas/dificil.png" alt="">
+
+                Modo dificil
+
+                <img src="/descargas/info.png" alt="" class="info">
+
+                <span class="infoTexto">Enfrenta el reto definitivo: con una sola vida, paredes solidas, un campo de juego mas grande, y una velocidad mas alta. ¿listo para poner a prueba tus habilidades al maximo?</span>
+            </button>
+            <button class="botonAjustes" id="ajustes" onclick="window.location.href='/html/ajustes.html';" type="button">
+                <img src="/descargas/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                Configuracion
+            </button>
+            <button class="botonLogros" onclick="window.location.href='/html/logros.html'">
+                <img src="/descargas/logros.png" alt="logros">
+                Logros
+            </button>
+        </article>
+    </section>
+
+    <div class="fondoEstadisticas"></div>
+    <img id="iconoCerrar" class="iconoCerrar" src="/descargas/cerrar.png" alt="cerrar">
+    <section id="marco" class="marco">
+        <table id="estadisticas">
+            <thead>
+                <tr>
+                    <th>Jugador</th>
+                    <th>Modo</th>
+                    <th>Color</th>
+                    <th>Tiempo</th>
+                    <th>Comida</th>
+                    <th>Récord <small>(modo facil)</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </section>
+    <button id="borrarHistorial" class="borraHistorial">Borrar historial
+        <img src="/descargas/borrar.png" alt="">
+    </button>
+<script src="/js/inicio.js"></script>
+<script src="/pagInicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/ajustes.css">
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+</head>
+<body>
+    <div class="columna">
+
+        <fieldset>
+            <legend>Ajustes de Sonido</legend>
+            <div>
+                <label for="musicaFondo">Música de fondo:</label>
+                <input type="checkbox" id="musicaFondo" class="sonido" name="musicaFondo">
+            </div>
+            <div>
+                <label for="efectosSonido">Efectos de sonido:</label>
+                <input type="checkbox" id="efectosSonido" class="sonido" name="efectosSonido">
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Personalización del Juego</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input class="nombre" type="text" id="nombre" name="nombre">
+            </div>
+            <div>
+                <label for="color">Color:</label>
+                <select class="color" id="color" name="color">
+                    <option value="blue" selected>Azul</option>
+                    <option value="green">Verde</option>
+                    <option value="gray">Gris</option>
+                </select>
+            </div>
+        </fieldset>
+    </div>
+    <div class="columna">
+        <fieldset>
+            <legend>Dificultad extra</legend>
+            <div>
+                <label for="tamano">Tamano del mapa:</label>
+                <select name="tamano" id="tamano">
+                    <option value="normal">Normal</option>
+                    <option value="grande">Grande</option>
+                </select>
+            </div>
+            <div>
+                <label for="incrementoVel">Incremento de velocidad:</label>
+                <input type="checkbox" name="incrementoVel">
+            </div>
+            <div>
+                <label for="obstaculos">Obstaculos:</label>
+                <input type="checkbox" name="obstaculos">
+            </div>
+            <div>
+                <label for="hambre">Hambre:</label>
+                <input type="checkbox" name="hambre">
+            </div>
+            <div>
+                <label for="invertirControles">Invertir controles:</label>
+                <input type="checkbox" name="invertirControles">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Interfaz</legend>
+            <div>
+                <label for="cronometro">Mostrar cronometro:</label>
+                <input type="checkbox" name="cronometro">
+            </div>
+            <div>
+                <label for="logros">Mostrar logros:</label>
+                <input type="checkbox" name="logros">
+            </div>
+            <div>
+                <label for="puntuacion">Mostrar puntuacion:</label>
+                <input type="checkbox" name="puntuacion">
+            </div>
+        </fieldset>
+    </div>
+    <img id="volver" onclick="window.location.href='/index.html'" src="/descargas/volver.png" alt="">
+
+    <script src="/ajustes.js"></script>
+</body>
+</html>
